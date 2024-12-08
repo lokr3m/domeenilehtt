@@ -1,70 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=SUSE:wght@100..800&display=swap');
-body {
-    background-color: #1a1a1a;
-    padding-top: 500px;
+
+body, html {
+  background: url("bg.jpg") rgba(0, 0, 0, 0.3);
+  background-blend-mode: multiply;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: "Inter", sans-serif;
+  overflow-y: hidden;
 }
-.header {
-    background-color: #111;
-    padding: 10px 0;
-    position: fixed;
-    width: 100%;
-    z-index: 1000;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+
+@media (max-width: 991px){
+  .sidebar {
+    background-color: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+  }
 }
- 
-.header .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+
+.btn-blue {
+  background-color: blue;
+  color: white;
+  border: none;
 }
- 
-.logo {
-    font-size: 24px;
-    font-weight: bold;
-    color: #fff;
-}
- 
-.nav a {
-    margin: 0 15px;
-    text-decoration: none;
-    color: #ccc;
-    font-size: 16px;
-    transition: color 0.3s;
-}
- 
-.nav a:hover {
-    color: #fff;
-}
- 
-.login {
-    text-decoration: none;
-    color: #ccc;
-    font-size: 16px;
-    transition: color 0.3s;
-}
- 
-.login:hover {
-    color: #fff;
-}
- 
-/* Главный контент */
-.cover {
-    height: 100vh;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)),
-        url('background.jpg') center/cover no-repeat;
-}
- 
-.cover h1 {
-    font-size: 3rem;
-    margin-bottom: 20px;
-}
- 
-.cover p {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
-}
- 
-.cover .btn {
-    font-size: 1rem;
-    padding: 10px 20px;
+
+.btn-blue:hover {
+  background-color: darkblue;
 }
