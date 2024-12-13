@@ -18,9 +18,19 @@ body, html {
 }
 
 .btn-blue {
-  background-color: blue;
+  background-color: #0048D9;
   color: white;
   border: none;
+  border-radius: 6px;
+  width: 157px;
+  height: 38px;
+  padding-left: 16px;
+  padding-top: 4px;
+  font-size: 18px;
+}
+
+.text {
+  font-size: 0.7em;
 }
 
 .btn-blue:hover {
