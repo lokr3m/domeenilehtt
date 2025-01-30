@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=SUSE:wght@100..800&display=swap');
+
+body {
+    font-family: "Inter", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #eaeaea;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 30px;
+    margin-right: 10px;
+}
+
+.nav-items {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.nav-items img {
+    width: 24px;
+    cursor: pointer;
+}
+
+.login {
+    cursor: pointer;
+}
+
+.lang-dropdown {
+    cursor: pointer;
+}
+
+/* Step Progress Bar */
+.progress-container {
+    display: flex;
+    justify-content: center;
+    background: #eaeaea;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+.step {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    color: #666;
+    margin: 0 10px;
+}
+
+.step .circle {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    margin-right: 8px;
+    border: 2px solid #666;
+    background: #fff;
+}
+
+.step.active .circle {
+    background: #555;
+    color: white;
+    border-color: #555;
+}
+
+.step.active {
+    color: black;
+    font-weight: bold;
+}
+
+/* Search Section */
+.search-container {
+    background: white;
+    padding: 30px;
+    max-width: 600px;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.search-container h2 {
+    margin-bottom: 10px;
+}
+
+.search-container p {
+    font-size: 14px;
+    color: #666;
+}
+
+.search-box {
+    display: flex;
+    margin-top: 15px;
+    background: #eee;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.search-box input {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    background: none;
+    font-size: 16px;
+    outline: none;
+}
+
+.search-box select {
+    padding: 10px;
+    border: none;
+    background: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.search-box button {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.search-box button:hover {
+    background: #0056b3;
+}
+
+.next-step {
+    background: #ddd;
+    padding: 15px;
+    text-align: center;
+    font-size: 16px;
+    color: #888;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+ /* Suggested Domains */
+ .suggested-domains {
+    display: none;
+    margin-top: 20px;
+    padding: 15px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.suggested-domains p {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.domain-list {
+    list-style: none;
+    padding: 0;
+}
+
+.domain-list li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+}
+
+.domain-list li:hover {
+    background: #f0f0f0;
+}
+
+.availability-message {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+    margin-top: 15px;
+}
+
+.check-icon {
+    color: #4CAF50;
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+#periodSelect {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#nextButton {
+    display: block;
+    width: 100%;
+    background: #ddd;
+    color: #888;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 15px;
+    border: none;
+    margin-top: 15px;
+    border-radius: 5px;
+    cursor: not-allowed;
+}
+
+#nextButton:enabled {
+    background: #007bff;
+    color: white;
+    cursor: pointer;
+}
