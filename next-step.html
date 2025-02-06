@@ -43,45 +43,61 @@
         </div>
     </div>
     <section class="d-flex align-items-center justify-content-center">
-        <div class="hero container text-center p-5">
-            <h1>Registreeri oma domeen</h1>
-            <p id="domainDisplay"></p>
-
-            <!-- Форма регистрации домена -->
-            <div class="registration-form">
-                <form id="domainForm">
-                    <div class="mb-3">
-                        <label for="userName" class="form-label">Teie nimi</label>
-                        <input type="text" class="form-control" id="userName" required placeholder="Sisestage oma nimi">
+        <div class="container">
+            <div class="row">
+                <!-- Left Side (Form) -->
+                <div class="col-md-6 text-center p-5">
+                    <h1>Registreeri oma domeen</h1>
+                    <p id="domainDisplay"></p>
+    
+                    <div class="registration-form">
+                        <form id="domainForm">
+                            <div class="mb-3">
+                                <label for="userName" class="form-label">Teie nimi</label>
+                                <input type="text" class="form-control" id="userName" required placeholder="Sisestage oma nimi">
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Teie e-post</label>
+                                <input type="email" class="form-control" id="email" required placeholder="Sisestage oma e-post">
+                            </div>
+                            <div class="mb-3">
+                                <label for="phone" class="form-label">Telefon</label>
+                                <input type="text" class="form-control" id="phone" placeholder="Sisestage oma telefoninumber">
+                            </div>
+                            <input type="checkbox" id="check">
+                            <label for="check">See tellimus on ettevõttele</label>
+    
+                            <div id="extraFields" style="display: none;">
+                                <div class="mb-3">
+                                    <label for="name" class="form-label">Ettevõtte nimi</label>
+                                    <input type="text" class="form-control" id="name" placeholder="Sisestage ettevõtte nimi">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="number" class="form-label">Ettevõtte registreerimise number</label>
+                                    <input type="text" class="form-control" id="number" placeholder="Sisestage registreerimise number">
+                                </div>
+                            </div>
+    
+                            <button type="submit" class="btn btn-primary mt-3">Registreeri domeen</button>
+                        </form>
                     </div>
-                    <div class="mb-3">
-                        <label for="email" class="form-label">Teie e-post</label>
-                        <input type="email" class="form-control" id="email" required placeholder="Sisestage oma e-post">
+    
+                    <div id="confirmationMessage" class="mt-4" style="display: none;">
+                        <p>Teie domeen on edukalt registreeritud!</p>
+                        <a href="index.html" class="btn btn-primary">Tagasi esilehele</a>
                     </div>
-                    <div class="mb-3">
-                        <label for="number" class="form-label">Teie telefoni number</label>
-                        <input type="number" class="form-control" id="number" required placeholder="Sisestage telefoni number">
-                    </div>
-                    <input type = "checkbox" id="check">
-                    <label for = "check">Lisa andmed</label>
-
-                    <div id="extraFields" style="display: none;">
-                        <div class="mb-3">
-                            <label for="name" class="form-label">Ettevõtte nimi</label>
-                            <input type="text" class="form-control" id="address" placeholder="Sisestage ettevõtte nimi">
+                </div>
+    
+                <!-- Right Side (Card) -->
+                <div class="col-md-6 d-flex align-items-center justify-content-center">
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-body">
+                            <h2 class="card-title">Tellimus</h2>
+                            <p class="card-text">99.01€ + KM</p>
+                            <a href="index.html" class="btn btn-primary">Kustuta tellimus</a>
                         </div>
-                        <div class="mb-3">
-                            <label for="code" class="form-label">Ettevõtte registratsiooni number</label>
-                            <input type="text" class="form-control" id="phone" placeholder="Sisestage number">
-                        </div>
                     </div>
-                    <button type="submit" class="btn btn-primary">Registreeri domeen</button>
-                </form>
-            </div>
-
-            <div id="confirmationMessage" class="mt-4" style="display: none;">
-                <p>Teie domeen on edukalt registreeritud!</p>
-                <a href="index.html" class="btn btn-primary">Tagasi esilehele</a>
+                </div>
             </div>
         </div>
     </section>
