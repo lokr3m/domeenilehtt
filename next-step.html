@@ -42,7 +42,7 @@
             Hakka kasutama
         </div>
     </div>
-    <section class="d-flex align-items-center justify-content-center vh-100">
+    <section class="d-flex align-items-center justify-content-center">
         <div class="hero container text-center p-5">
             <h1>Registreeri oma domeen</h1>
             <p id="domainDisplay"></p>
@@ -57,6 +57,23 @@
                     <div class="mb-3">
                         <label for="email" class="form-label">Teie e-post</label>
                         <input type="email" class="form-control" id="email" required placeholder="Sisestage oma e-post">
+                    </div>
+                    <div class="mb-3">
+                        <label for="number" class="form-label">Teie telefoni number</label>
+                        <input type="number" class="form-control" id="number" required placeholder="Sisestage telefoni number">
+                    </div>
+                    <input type = "checkbox" id="check">
+                    <label for = "check">Lisa andmed</label>
+
+                    <div id="extraFields" style="display: none;">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Ettevõtte nimi</label>
+                            <input type="text" class="form-control" id="address" placeholder="Sisestage ettevõtte nimi">
+                        </div>
+                        <div class="mb-3">
+                            <label for="code" class="form-label">Ettevõtte registratsiooni number</label>
+                            <input type="text" class="form-control" id="phone" placeholder="Sisestage number">
+                        </div>
                     </div>
                     <button type="submit" class="btn btn-primary">Registreeri domeen</button>
                 </form>
@@ -103,6 +120,12 @@
 
         // Вызов функции при загрузке страницы
         window.onload = displayDomain;
+    </script>
+    <script>
+        document.getElementById('check').addEventListener('change', function () {
+            const extraFields = document.getElementById('extraFields');
+            extraFields.style.display = this.checked ? 'block' : 'none';
+        });
     </script>
 </body>
 
