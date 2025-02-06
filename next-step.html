@@ -46,34 +46,32 @@
         <div class="container">
             <div class="row">
                 <!-- Left Side (Form) -->
-                <div class="col-md-6 text-center p-5">
+                <div class="text-center">
                     <h1>Registreeri oma domeen</h1>
-                    <p id="domainDisplay"></p>
-    
                     <div class="registration-form">
                         <form id="domainForm">
-                            <div class="mb-3">
-                                <label for="userName" class="form-label">Teie nimi</label>
+                            <div class="mb-3 row">
+                                <label for="userName" class="col-md-4 form-label">Teie nimi</label>
                                 <input type="text" class="form-control" id="userName" required placeholder="Sisestage oma nimi">
                             </div>
-                            <div class="mb-3">
-                                <label for="email" class="form-label">Teie e-post</label>
+                            <div class="mb-3 row">
+                                <label for="email" class="col-md-4 form-label">Teie e-post</label>
                                 <input type="email" class="form-control" id="email" required placeholder="Sisestage oma e-post">
                             </div>
-                            <div class="mb-3">
-                                <label for="phone" class="form-label">Telefon</label>
+                            <div class="mb-3 row">
+                                <label for="phone" class="col-md-2 form-label">Telefon</label>
                                 <input type="text" class="form-control" id="phone" placeholder="Sisestage oma telefoninumber">
                             </div>
                             <input type="checkbox" id="check">
                             <label for="check">See tellimus on ettevõttele</label>
     
                             <div id="extraFields" style="display: none;">
-                                <div class="mb-3">
-                                    <label for="name" class="form-label">Ettevõtte nimi</label>
+                                <div class="mb-3 row">
+                                    <label for="name" class="col-md-5 form-label">Ettevõtte nimi</label>
                                     <input type="text" class="form-control" id="name" placeholder="Sisestage ettevõtte nimi">
                                 </div>
                                 <div class="mb-3">
-                                    <label for="number" class="form-label">Ettevõtte registreerimise number</label>
+                                    <label for="number" class="col-md-10 form-label">Ettevõtte registreerimise number</label>
                                     <input type="text" class="form-control" id="number" placeholder="Sisestage registreerimise number">
                                 </div>
                             </div>
@@ -89,10 +87,11 @@
                 </div>
     
                 <!-- Right Side (Card) -->
-                <div class="col-md-6 d-flex align-items-center justify-content-center">
-                    <div class="card" style="width: 18rem;">
+                <div class="col-md-4">
+                    <div class="card tellimus-card">
                         <div class="card-body">
                             <h2 class="card-title">Tellimus</h2>
+                            <p class="text">Te olete valinud domeeni:</p>
                             <p class="card-text">99.01€ + KM</p>
                             <a href="index.html" class="btn btn-primary">Kustuta tellimus</a>
                         </div>

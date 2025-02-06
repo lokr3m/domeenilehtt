@@ -159,3 +159,10 @@ p {
     color: black;
     font-weight: bold;
 }
+
+.tellimus-card {
+    position: absolute;
+    top: 250px;
+    right: 650px;
+    width: 18rem;
+}
