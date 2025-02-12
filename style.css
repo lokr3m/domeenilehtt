@@ -1,38 +1,283 @@
+/* Import fonts only once */
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=SUSE:wght@100..800&display=swap');
 
+/* General styles */
 body, html {
-  background: url("bg.jpg") rgba(0, 0, 0, 0.3);
-  background-blend-mode: multiply;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  font-family: "Inter", sans-serif;
-  overflow-y: hidden;
+  height: 100vh;
+    font-family: "Inter", sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url("bg.jpg") rgba(0, 0, 0, 0.3);
+    background-blend-mode: multiply;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #000000;
+    overflow-y: hidden;
 }
 
-@media (max-width: 991px){
-  .sidebar {
-    background-color: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(10px);
-  }
-}
-
+/* Buttons */
 .btn-blue {
-  background-color: #0048D9;
+    background-color: #0048D9;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    width: 157px;
+    height: 38px;
+    padding-left: 16px;
+    padding-top: 4px;
+    font-size: 18px;
+}
+.btn-blue:hover {
+    background-color: darkblue;
+}
+
+/* Typography */
+h1 {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h2 {
   color: white;
-  border: none;
-  border-radius: 6px;
-  width: 157px;
-  height: 38px;
-  padding-left: 16px;
-  padding-top: 4px;
-  font-size: 18px;
+}
+
+p {
+    font-size: 1.25rem;
+    text-align: center;
 }
 
 .text {
-  font-size: 0.7em;
+    font-size: 0.7em;
 }
 
-.btn-blue:hover {
-  background-color: darkblue;
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 30px;
+    margin-right: 10px;
+}
+
+.nav-items {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.nav-items img {
+    width: 24px;
+    cursor: pointer;
+}
+
+.login, .lang-dropdown {
+    cursor: pointer;
+}
+
+/* Step Progress Bar */
+.progress-container {
+    display: flex;
+    justify-content: center;
+    background: #eaeaea;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+.step {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    color: #666;
+    margin: 0 10px;
+}
+
+.step .circle {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    margin-right: 8px;
+    border: 2px solid #666;
+    background: #fff;
+}
+
+.step.active .circle {
+    background: #555;
+    color: white;
+    border-color: #555;
+}
+
+.step.active {
+    color: black;
+    font-weight: bold;
+}
+
+.search-container {
+    background: white;
+    padding: 30px;
+    max-width: 600px;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.search-box {
+    display: flex;
+    margin-top: 15px;
+    background: #eee;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.search-box input, .search-box select {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    background: none;
+    font-size: 16px;
+    outline: none;
+}
+
+.search-box button {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.search-box button:hover {
+    background: #0056b3;
+}
+
+#periodSelect {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#nextButton {
+  display: block;
+  width: 100%;
+  background: #ddd;
+  color: #888;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 15px;
+  border: none;
+  margin-top: 15px;
+  border-radius: 5px;
+  cursor: not-allowed;
+}
+
+#nextButton:enabled {
+  background: #007bff;
+  color: white;
+  cursor: pointer;
+}
+
+.registration-form {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.registration-form .form-label {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.registration-form .form-control {
+    font-size: 1rem;
+    padding: 10px;
+}
+
+.registration-form button {
+    width: 100%;
+    padding: 10px;
+    font-size: 1.2rem;
+    background-color: #0048D9;
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.registration-form button:hover {
+    background-color: #153B53;
+}
+
+#confirmationMessage {
+    font-size: 1.5rem;
+    color: #FFD900;
+}
+
+#confirmationMessage a {
+    display: inline-block;
+    margin-top: 20px;
+    background-color: #20537D;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+#confirmationMessage a:hover {
+    background-color: #153B53;
+}
+
+.search-container {
+  max-width: 600px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 5px;
+  text-align: center;
+  background: white;
+  padding: 30px;
+  margin: 20px auto;
+  border-radius: 10px;
+}
+
+.availability-message {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  font-weight: bold;
+  color: black;
+  margin-top: 15px;
+}
+
+.container-tellimus {
+    display: flex;
+}
+
+.tellimus-card {
+    width: 18rem;
 }
