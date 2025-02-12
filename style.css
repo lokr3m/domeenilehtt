@@ -244,18 +244,8 @@ p {
 }
 
 #confirmationMessage {
-    font-size: 1.5rem;
-    color: #FFD900;
-}
-
-#confirmationMessage a {
-    display: inline-block;
-    margin-top: 20px;
-    background-color: #20537D;
+    text-align: center;
     color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
 }
 
 #confirmationMessage a:hover {

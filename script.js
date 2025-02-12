@@ -37,16 +37,13 @@ function searchDomain() {
         var periodSelect = document.getElementById("periodSelect");
         var nextButton = document.getElementById("nextButton");
 
-        // Enable next step after selecting a period
         periodSelect.addEventListener("change", function () {
             nextButton.disabled = !this.value;
         });
 
-        // Handle next step button click
         nextButton.addEventListener("click", function () {
-            alert("Liigume järgmisele sammule domeeniga: " + fullDomain);
-            window.location.href = "next-step.html"; // Change to actual next step URL
+            window.location.href = "next-step.html";
         });
 
-    }, 1000); // Simulating a delay for availability check
+    }, 1000);
 }
