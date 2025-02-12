@@ -3,7 +3,7 @@
 
 /* General styles */
 body, html {
-  height: 100vh;
+    min-height: 100vh;
     font-family: "Inter", sans-serif;
     margin: 0;
     padding: 0;
@@ -13,7 +13,6 @@ body, html {
     background-size: cover;
     background-repeat: no-repeat;
     color: #000000;
-    overflow-y: hidden;
 }
 
 /* Buttons */
@@ -22,10 +21,7 @@ body, html {
     color: white;
     border: none;
     border-radius: 6px;
-    width: 157px;
-    height: 38px;
-    padding-left: 16px;
-    padding-top: 4px;
+    padding: 1.5 rem, 16px;
     font-size: 18px;
 }
 .btn-blue:hover {
@@ -131,6 +127,16 @@ p {
 .step.active {
     color: black;
     font-weight: bold;
+}
+
+.label {
+    margin-top: 5px;
+}
+
+@media (max-width: 600px) {
+    .label {
+        display: none;
+    }
 }
 
 .search-container {
