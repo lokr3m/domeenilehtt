@@ -21,7 +21,7 @@ function searchDomain() {
         resultContainer.innerHTML = `
             <div class="availability-message">
                 <span class="check-icon">✅</span>
-                <strong>${fullDomain}</strong> on saadaval. Vali sobiv periood ja registreeri kohe.
+                <strong>${fullDomain}&nbsp;</strong> on saadaval. Vali sobiv periood ja registreeri kohe.
             </div>
             <select id="periodSelect">
                 <option value="">vali periood</option>

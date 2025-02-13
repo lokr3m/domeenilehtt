@@ -150,7 +150,6 @@ p {
 }
 
 .search-box {
-    display: flex;
     margin-top: 15px;
     background: #eee;
     padding: 10px;
