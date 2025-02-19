@@ -2,16 +2,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=SUSE:wght@100..800&display=swap');
 
 /* General styles */
-body, html {
+body,
+html {
     min-height: 100vh;
     font-family: "Inter", sans-serif;
     margin: 0;
     padding: 0;
-    background: url("bg.jpg") rgba(0, 0, 0, 0.3);
+    background: url("bg.jpg") center / cover no-repeat rgba(0, 0, 0, 0.3);
     background-blend-mode: multiply;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
     color: #000000;
 }
 
@@ -24,30 +22,14 @@ body, html {
     padding: 1.5 rem, 16px;
     font-size: 18px;
 }
-.btn-blue:hover {
-    background-color: darkblue;
-}
+
+.btn-blue:hover { background-color: darkblue; }
 
 /* Typography */
-h1 {
-    font-size: 3rem;
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-h2 {
-    text-align: center;
-  color: white;
-}
-
-p {
-    font-size: 1.25rem;
-    text-align: center;
-}
-
-.text {
-    font-size: 0.7em;
-}
+h1 { font-size: 3rem; text-align: center; margin-bottom: 20px; }
+h2 { text-align: center; color: white; }
+p { font-size: 1.25rem; text-align: center; }
+.text { font-size: 0.7em; }
 
 /* Navbar */
 .navbar {
@@ -56,35 +38,23 @@ p {
     align-items: center;
     background: white;
     padding: 10px 20px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .logo {
-    font-size: 24px;
-    font-weight: bold;
+    font: bold 24px sans-serif;
     display: flex;
     align-items: center;
 }
 
-.logo img {
-    height: 30px;
-    margin-right: 10px;
-}
-
+.logo img { height: 30px; margin-right: 10px; }
 .nav-items {
     display: flex;
     align-items: center;
     gap: 15px;
 }
-
-.nav-items img {
-    width: 24px;
-    cursor: pointer;
-}
-
-.login, .lang-dropdown {
-    cursor: pointer;
-}
+.nav-items img { width: 24px; cursor: pointer; }
+.login, .lang-dropdown { cursor: pointer; }
 
 /* Step Progress Bar */
 .progress-container {
@@ -118,26 +88,11 @@ p {
     background: #fff;
 }
 
-.step.active .circle {
-    background: #555;
-    color: white;
-    border-color: #555;
-}
+.step.active .circle { background: #555; color: white; border-color: #555; }
+.step.active { color: black; font-weight: bold; }
+.label { margin-top: 5px; }
 
-.step.active {
-    color: black;
-    font-weight: bold;
-}
-
-.label {
-    margin-top: 5px;
-}
-
-@media (max-width: 600px) {
-    .label {
-        display: none;
-    }
-}
+@media (max-width: 600px) { .label { display: none; } }
 
 .search-container {
     background: white;
@@ -173,39 +128,33 @@ p {
     cursor: pointer;
     font-size: 16px;
 }
+.search-box button:hover { background: #0056b3; }
 
-.search-box button:hover {
-    background: #0056b3;
+#periodSelect, #nextButton {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
 }
 
 #periodSelect {
-  display: block;
-  width: 100%;
-  padding: 10px;
-  margin-top: 10px;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
 }
-
 #nextButton {
-  display: block;
-  width: 100%;
-  background: #ddd;
-  color: #888;
-  font-size: 16px;
-  font-weight: bold;
-  padding: 15px;
-  border: none;
-  margin-top: 15px;
-  border-radius: 5px;
-  cursor: not-allowed;
+    background: #ddd;
+    color: #888;
+    font-weight: bold;
+    border: none;
+    margin-top: 15px;
+    cursor: not-allowed;
 }
 
 #nextButton:enabled {
-  background: #007bff;
-  color: white;
-  cursor: pointer;
+    background: #007bff;
+    color: white;
+    cursor: pointer;
 }
 
 .registration-form {
@@ -252,22 +201,22 @@ p {
 }
 
 .search-container {
-  max-width: 600px;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 5px;
-  text-align: center;
-  background: white;
-  padding: 30px;
-  margin: 20px auto;
-  border-radius: 10px;
+    max-width: 600px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 5px;
+    text-align: center;
+    background: white;
+    padding: 30px;
+    margin: 20px auto;
+    border-radius: 10px;
 }
 
 .availability-message {
-  display: flex;
-  align-items: center;
-  font-size: 18px;
-  font-weight: bold;
-  color: black;
-  margin-top: 15px;
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+    margin-top: 15px;
 }
 
 .text {

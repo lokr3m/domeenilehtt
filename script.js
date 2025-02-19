@@ -20,7 +20,7 @@ function searchDomain() {
         resultContainer.style.display = "block";
         resultContainer.innerHTML = `
             <div class="availability-message">
-                <span class="check-icon">✅</span>
+                <span class="check-icon">✅&nbsp;</span>
                 <strong>${fullDomain}&nbsp;</strong> on saadaval. Vali sobiv periood ja registreeri kohe.
             </div>
             <select id="periodSelect">
@@ -41,6 +41,9 @@ function searchDomain() {
             nextButton.disabled = !this.value;
         });
 
+        periodSelect.addEventListener("change", function () {
+            selectedPeriodText.textContent = periodSelect.value || "Vali periood";
+        });
         nextButton.addEventListener("click", function () {
             window.location.href = "next-step.html";
         });
